@@ -1,0 +1,66 @@
+name: Publish Gismeteo HA release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Semantic version without v, e.g. 4.0.1'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gismeteo-ha-publish
+  cancel-in-progress: false
+
+jobs:
+  release:
+    # Run from the default/main branch. A tag is created only AFTER the manifest is updated.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate version and update manifest
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          python scripts/set_version.py "$RELEASE_VERSION"
+          python -m compileall -q custom_components/gismeteo_ha
+          python -m pip install --disable-pip-version-check pytest aiohttp beautifulsoup4 defusedxml
+          python -m pytest -q tests
+          node --check custom_components/gismeteo_ha/frontend/gismeteo-ha-card.js
+          node tests/test_card_node.js
+          git diff --check
+      - name: Commit version to main
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add custom_components/gismeteo_ha/manifest.json custom_components/gismeteo_ha/const.py
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(release): v${RELEASE_VERSION}"
+            git push origin HEAD:main
+          fi
+      - name: Create release tag and publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          test "$(python -c 'import json;print(json.load(open("custom_components/gismeteo_ha/manifest.json"))["version"])')" = "$RELEASE_VERSION"
+          if git show-ref --verify --quiet "refs/tags/v${RELEASE_VERSION}"; then
+            echo "Tag v${RELEASE_VERSION} already exists" >&2
+            exit 1
+          fi
+          gh release create "v${RELEASE_VERSION}" --target "$(git rev-parse HEAD)" \
+            --title "Gismeteo HA v${RELEASE_VERSION}" \
+            --generate-notes
