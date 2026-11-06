@@ -41,28 +41,3 @@ entity: weather.my_home
 mode: detailed          # detailed | compact
 show_forecast: true
 ```
-
-## Lưu ý quan trọng
-
-- **Thay đổi lớn từ 3.x:** Domain cũ `gismeteo` chuyển sang `gismeteo_ha`. **Sao lưu**, ghi lại entity ID/automation, gỡ bản cũ và thư mục `custom_components/gismeteo`, cài bản mới và **cấu hình lại**. Home Assistant không tự chuyển config entry giữa hai domain.
-- Gismeteo dùng endpoint **không chính thức**, có thể thay đổi hoặc chặn truy cập; không bảo đảm dữ liệu luôn sẵn có. Có thể tắt dữ liệu HTML mở rộng trong Options khi gặp HTTP 403.
-- `visibility_unit: km` không chứng minh có giá trị tầm nhìn: chỉ đọc khi nguồn trả về khoảng cách có đơn vị rõ ràng. `UV` có thể xuất phát từ dự báo ngày hiện tại, không phải phép đo tức thời. Chỉ số cảm nhận và điểm sương là tính toán từ những giá trị đã có.
-- Bộ sensor ngày có thể chọn **0–9 ngày** trong Options. Log lỗi và trạng thái có tại **Settings → System → Logs** và **Devices & services → Gismeteo HA → Download diagnostics**.
-- Giữ bản quyền [CC BY-NC-SA 4.0](LICENSE) của dự án gốc [Limych/ha-gismeteo](https://github.com/Limych/ha-gismeteo); mã phái sinh này **không** được tự đổi sang MIT.
-
-## Tạo release tự động
-
-Trên GitHub vào **Actions → Publish Gismeteo HA release → Run workflow** trên nhánh `main`, nhập phiên bản như `4.0.1` (không có `v`). Workflow sẽ cập nhật `manifest.json` + `const.py`, kiểm thử, commit lên `main`, **sau đó** tạo tag và GitHub Release `v4.0.1` đúng trên commit đó. Không tạo GitHub Release thủ công trước khi cập nhật manifest.
-
-Báo lỗi: https://github.com/khaisilk1910/gismeteo_ha/issues
-
-### Local time display
-
-`gismeteo_last_refresh`, `gismeteo_sunrise`, and `gismeteo_sunset` on the
-weather entity display as ISO 8601 strings in **Settings → System → General →
-Time zone**, including the local UTC offset. The built-in timestamp sensors
-remain date/time entities; Home Assistant renders them in local time in the UI.
-The bundled dashboard card uses the same HA time zone for forecast hours.
-If sunrise/sunset hours appear implausible, verify the weather location and
-provider data: changing the time zone cannot correct an incorrect source
-observation.
