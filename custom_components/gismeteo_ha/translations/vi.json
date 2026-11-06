@@ -1,0 +1,275 @@
+{
+  "entity": {
+    "sensor": {
+      "condition": {
+        "name": "Tình trạng thời tiết",
+        "state": {
+          "clear-night": "Clear, night",
+          "cloudy": "Cloudy",
+          "exceptional": "Exceptional",
+          "fog": "Fog",
+          "hail": "Hail",
+          "lightning": "Lightning",
+          "lightning-rainy": "Lightning, rainy",
+          "partlycloudy": "Partly cloudy",
+          "pouring": "Pouring",
+          "rainy": "Rainy",
+          "snowy": "Snowy",
+          "snowy-rainy": "Snowy, rainy",
+          "sunny": "Sunny",
+          "windy": "Windy",
+          "windy-variant": "Windy"
+        }
+      },
+      "temperature": {
+        "name": "Nhiệt độ"
+      },
+      "apparent_temperature": {
+        "name": "Nhiệt độ cảm nhận"
+      },
+      "humidity": {
+        "name": "Độ ẩm"
+      },
+      "pressure": {
+        "name": "Áp suất"
+      },
+      "precipitation": {
+        "name": "Lượng mưa/tuyết"
+      },
+      "wind_speed": {
+        "name": "Tốc độ gió"
+      },
+      "wind_bearing": {
+        "name": "Hướng gió"
+      },
+      "wind_bearing_label": {
+        "name": "Hướng gió",
+        "state": {
+          "n": "North",
+          "ne": "NorthEast",
+          "e": "East",
+          "se": "SouthEast",
+          "s": "South",
+          "sw": "SouthWest",
+          "w": "West",
+          "nw": "NorthWest"
+        }
+      },
+      "cloud_coverage": {
+        "name": "Mây che phủ"
+      },
+      "rain_amount": {
+        "name": "Lượng mưa"
+      },
+      "snow_amount": {
+        "name": "Lượng tuyết"
+      },
+      "is_storm": {
+        "name": "Dông bão",
+        "state": {
+          "off": "False",
+          "on": "True"
+        }
+      },
+      "geomagnetic_field": {
+        "name": "Hoạt động địa từ"
+      },
+      "water_temperature": {
+        "name": "Nhiệt độ nước"
+      },
+      "uv_index": {
+        "name": "Chỉ số UV"
+      },
+      "pollen_birch": {
+        "name": "Phấn hoa bạch dương"
+      },
+      "pollen_grass": {
+        "name": "Phấn hoa cỏ"
+      },
+      "pollen_ragweed": {
+        "name": "Phấn hoa cỏ phấn hương"
+      },
+      "road_condition": {
+        "name": "Tình trạng đường",
+        "state": {
+          "none": "No data",
+          "dry": "Dry",
+          "water": "Water",
+          "wet": "Wet"
+        }
+      },
+      "condition_forecast": {
+        "name": "Tình trạng thời tiết dự báo ngày {day}",
+        "state": {
+          "clear-night": "Clear, night",
+          "cloudy": "Cloudy",
+          "exceptional": "Exceptional",
+          "fog": "Fog",
+          "hail": "Hail",
+          "lightning": "Lightning",
+          "lightning-rainy": "Lightning, rainy",
+          "partlycloudy": "Partly cloudy",
+          "pouring": "Pouring",
+          "rainy": "Rainy",
+          "snowy": "Snowy",
+          "snowy-rainy": "Snowy, rainy",
+          "sunny": "Sunny",
+          "windy": "Windy",
+          "windy-variant": "Windy"
+        }
+      },
+      "temperature_forecast": {
+        "name": "Nhiệt độ dự báo ngày {day}"
+      },
+      "temperature_low_forecast": {
+        "name": "Nhiệt độ dự báo ngày {day}"
+      },
+      "apparent_temperature_forecast": {
+        "name": "Nhiệt độ cảm nhận dự báo ngày {day}"
+      },
+      "humidity_forecast": {
+        "name": "Độ ẩm dự báo ngày {day}"
+      },
+      "pressure_forecast": {
+        "name": "Áp suất dự báo ngày {day}"
+      },
+      "precipitation_forecast": {
+        "name": "Lượng mưa/tuyết dự báo ngày {day}"
+      },
+      "wind_speed_forecast": {
+        "name": "Tốc độ gió dự báo ngày {day}"
+      },
+      "wind_gust_speed_forecast": {
+        "name": "Wind Gusts Speed Forecast {day}d"
+      },
+      "wind_bearing_forecast": {
+        "name": "Hướng gió dự báo ngày {day}"
+      },
+      "wind_bearing_label_forecast": {
+        "name": "Hướng gió dự báo ngày {day}",
+        "state": {
+          "n": "North",
+          "ne": "NorthEast",
+          "e": "East",
+          "se": "SouthEast",
+          "s": "South",
+          "sw": "SouthWest",
+          "w": "West",
+          "nw": "NorthWest"
+        }
+      },
+      "cloud_coverage_forecast": {
+        "name": "Mây che phủ dự báo ngày {day}"
+      },
+      "rain_amount_forecast": {
+        "name": "Lượng mưa dự báo ngày {day}"
+      },
+      "snow_amount_forecast": {
+        "name": "Lượng tuyết dự báo ngày {day}"
+      },
+      "is_storm_forecast": {
+        "name": "Dông bão dự báo ngày {day}",
+        "state": {
+          "off": "False",
+          "on": "True"
+        }
+      },
+      "geomagnetic_field_forecast": {
+        "name": "Hoạt động địa từ dự báo ngày {day}"
+      },
+      "uv_index_forecast": {
+        "name": "Chỉ số UV dự báo ngày {day}"
+      },
+      "pollen_birch_forecast": {
+        "name": "Phấn hoa bạch dương dự báo ngày {day}"
+      },
+      "pollen_grass_forecast": {
+        "name": "Phấn hoa cỏ dự báo ngày {day}"
+      },
+      "pollen_ragweed_forecast": {
+        "name": "Phấn hoa cỏ phấn hương dự báo ngày {day}"
+      },
+      "road_condition_forecast": {
+        "name": "Tình trạng đường dự báo ngày {day}",
+        "state": {
+          "none": "No data",
+          "dry": "Dry",
+          "water": "Water",
+          "wet": "Wet"
+        }
+      },
+      "visibility": {
+        "name": "Tầm nhìn"
+      },
+      "dew_point": {
+        "name": "Điểm sương (tính toán)"
+      },
+      "sunrise": {
+        "name": "Bình minh"
+      },
+      "sunset": {
+        "name": "Hoàng hôn"
+      },
+      "visibility_forecast": {
+        "name": "Tầm nhìn dự báo ngày {day}"
+      },
+      "dew_point_forecast": {
+        "name": "Điểm sương dự báo ngày {day}"
+      },
+      "data_source": {
+        "name": "Nguồn dữ liệu"
+      },
+      "last_refresh": {
+        "name": "Lần cập nhật cuối"
+      }
+    }
+  },
+  "config": {
+    "abort": {
+      "no_mixed_config": "Đã cấu hình bằng YAML; không thể kết hợp với giao diện.",
+      "already_configured": "Vị trí này đã được cấu hình."
+    },
+    "error": {
+      "cannot_connect": "Không thể kết nối hoặc phân tích dữ liệu từ Gismeteo"
+    },
+    "step": {
+      "user": {
+        "title": "Gismeteo HA",
+        "description": "Nhập tên và tọa độ. Kết nối Internet chỉ được kiểm tra khi thêm vị trí.",
+        "data": {
+          "name": "Tên vị trí",
+          "latitude": "Vĩ độ",
+          "longitude": "Kinh độ"
+        }
+      }
+    }
+  },
+  "options": {
+    "abort": {
+      "no_options_available": "Vị trí cấu hình từ YAML phải điều chỉnh trong configuration.yaml."
+    },
+    "step": {
+      "init": {
+        "title": "Tùy chọn Gismeteo HA",
+        "data": {
+          "show_on_map": "Hiển thị vị trí trên bản đồ",
+          "add_sensors": "Tạo thêm các cảm biến thời tiết",
+          "forecast_days": "Số ngày cảm biến dự báo (0–6)",
+          "poll_interval": "Chu kỳ cập nhật (10–120 phút)",
+          "stale_minutes": "Cho phép cache cũ khi mất mạng (0–180 phút)",
+          "extended_data": "Bổ sung dữ liệu từ trang web (tùy khả năng)"
+        },
+        "data_description": {
+          "poll_interval": "Khuyến nghị: 15 phút. Chu kỳ dài hơn giảm tải mạng.",
+          "stale_minutes": "Đặt 0 để không dùng cache cũ. Xem tuổi dữ liệu trong phần Chẩn đoán.",
+          "extended_data": "Nếu Gismeteo thay đổi HTML, các dự báo chính vẫn hoạt động bình thường."
+        }
+      }
+    }
+  },
+  "system_health": {
+    "info": {
+      "can_reach_server": "Reach Gismeteo server"
+    }
+  }
+}

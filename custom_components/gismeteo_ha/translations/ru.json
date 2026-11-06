@@ -1,0 +1,275 @@
+{
+  "entity": {
+    "sensor": {
+      "condition": {
+        "name": "Погода",
+        "state": {
+          "clear-night": "Ясно, ночь",
+          "cloudy": "Облачно",
+          "exceptional": "Предупреждение",
+          "fog": "Туман",
+          "hail": "Град",
+          "lightning": "Молния",
+          "lightning-rainy": "Молния, дождь",
+          "partlycloudy": "Переменная облачность",
+          "pouring": "Ливень",
+          "rainy": "Дождь",
+          "snowy": "Снег",
+          "snowy-rainy": "Снег с дождем",
+          "sunny": "Ясно",
+          "windy": "Ветрено",
+          "windy-variant": "Ветрено"
+        }
+      },
+      "temperature": {
+        "name": "Температура"
+      },
+      "apparent_temperature": {
+        "name": "Ощущаемая Температура"
+      },
+      "humidity": {
+        "name": "Влажность"
+      },
+      "pressure": {
+        "name": "Давление"
+      },
+      "precipitation": {
+        "name": "Осадки"
+      },
+      "wind_speed": {
+        "name": "Скорость Ветра"
+      },
+      "wind_bearing": {
+        "name": "Направление Ветра"
+      },
+      "wind_bearing_label": {
+        "name": "Направление Ветра",
+        "state": {
+          "n": "Северный",
+          "ne": "Северо-Восточный",
+          "e": "Восточный",
+          "se": "Юго-Восточный",
+          "s": "Южный",
+          "sw": "Юго-Западный",
+          "w": "Западный",
+          "nw": "Северо-Западный"
+        }
+      },
+      "cloud_coverage": {
+        "name": "Облачность"
+      },
+      "rain_amount": {
+        "name": "Выпадение Дождя"
+      },
+      "snow_amount": {
+        "name": "Выпадение Снега"
+      },
+      "is_storm": {
+        "name": "Шторм",
+        "state": {
+          "off": "Нет",
+          "on": "Есть"
+        }
+      },
+      "geomagnetic_field": {
+        "name": "Геомагнитный Фон"
+      },
+      "water_temperature": {
+        "name": "Температура Воды"
+      },
+      "uv_index": {
+        "name": "УФ Фон"
+      },
+      "pollen_birch": {
+        "name": "Уровень Пыльцы Берёзы"
+      },
+      "pollen_grass": {
+        "name": "Уровень Пыльцы Трав"
+      },
+      "pollen_ragweed": {
+        "name": "Уровень Пыльцы Амброзии"
+      },
+      "road_condition": {
+        "name": "Состояние Дорог",
+        "state": {
+          "none": "Нет данных",
+          "dry": "Сухие",
+          "water": "Вода",
+          "wet": "Влажные"
+        }
+      },
+      "condition_forecast": {
+        "name": "Прогноз Погоды {day}д",
+        "state": {
+          "clear-night": "Ясно, ночь",
+          "cloudy": "Облачно",
+          "exceptional": "Предупреждение",
+          "fog": "Туман",
+          "hail": "Град",
+          "lightning": "Молния",
+          "lightning-rainy": "Молния, дождь",
+          "partlycloudy": "Переменная облачность",
+          "pouring": "Ливень",
+          "rainy": "Дождь",
+          "snowy": "Снег",
+          "snowy-rainy": "Снег с дождем",
+          "sunny": "Ясно",
+          "windy": "Ветрено",
+          "windy-variant": "Ветрено"
+        }
+      },
+      "temperature_forecast": {
+        "name": "Прогноз Температуры {day}д"
+      },
+      "temperature_low_forecast": {
+        "name": "Прогноз Нижней Температуры {day}д"
+      },
+      "apparent_temperature_forecast": {
+        "name": "Прогноз Ощущаемой Температуры {day}д"
+      },
+      "humidity_forecast": {
+        "name": "Прогноз Влажности {day}д"
+      },
+      "pressure_forecast": {
+        "name": "Прогноз Давления {day}д"
+      },
+      "precipitation_forecast": {
+        "name": "Прогноз Осадков {day}д"
+      },
+      "wind_speed_forecast": {
+        "name": "Прогноз Скорости Ветра {day}д"
+      },
+      "wind_gust_speed_forecast": {
+        "name": "Прогноз Скорости Порывов Ветра {day}д"
+      },
+      "wind_bearing_forecast": {
+        "name": "Прогноз Направления Ветра {day}д"
+      },
+      "wind_bearing_label_forecast": {
+        "name": "Прогноз Направления Ветра {day}д",
+        "state": {
+          "n": "Северный",
+          "ne": "Северо-Восточный",
+          "e": "Восточный",
+          "se": "Юго-Восточный",
+          "s": "Южный",
+          "sw": "Юго-Западный",
+          "w": "Западный",
+          "nw": "Северо-Западный"
+        }
+      },
+      "cloud_coverage_forecast": {
+        "name": "Прогноз Облачности {day}д"
+      },
+      "rain_amount_forecast": {
+        "name": "Прогноз Выпадения Дождя {day}д"
+      },
+      "snow_amount_forecast": {
+        "name": "Прогноз Выпадения Снега {day}д"
+      },
+      "is_storm_forecast": {
+        "name": "Прогноз Шторма {day}д",
+        "state": {
+          "off": "Нет",
+          "on": "Есть"
+        }
+      },
+      "geomagnetic_field_forecast": {
+        "name": "Прогноз Геомагнитного Фона {day}д"
+      },
+      "uv_index_forecast": {
+        "name": "Прогноз УФ Фона {day}д"
+      },
+      "pollen_birch_forecast": {
+        "name": "Прогноз Уровня Пыльцы Берёзы {day}д"
+      },
+      "pollen_grass_forecast": {
+        "name": "Прогноз Уровня Пыльцы Трав {day}д"
+      },
+      "pollen_ragweed_forecast": {
+        "name": "Прогноз Уровня Пыльцы Амброзии {day}д"
+      },
+      "road_condition_forecast": {
+        "name": "Прогноз Состояния Дорог {day}д",
+        "state": {
+          "none": "Нет данных",
+          "dry": "Сухие",
+          "water": "Вода",
+          "wet": "Влажные"
+        }
+      },
+      "visibility": {
+        "name": "Visibility"
+      },
+      "dew_point": {
+        "name": "Dew point (calculated)"
+      },
+      "sunrise": {
+        "name": "Sunrise"
+      },
+      "sunset": {
+        "name": "Sunset"
+      },
+      "visibility_forecast": {
+        "name": "Forecast visibility day {day}"
+      },
+      "dew_point_forecast": {
+        "name": "Forecast dew point day {day}"
+      },
+      "data_source": {
+        "name": "Data source"
+      },
+      "last_refresh": {
+        "name": "Last refresh"
+      }
+    }
+  },
+  "config": {
+    "abort": {
+      "no_mixed_config": "Настройка уже выполнена. Настройка через configuration.yaml несовместима с настройкой через интерфейс.",
+      "already_configured": "This location is already configured."
+    },
+    "error": {
+      "cannot_connect": "Не удалось подключиться."
+    },
+    "step": {
+      "user": {
+        "data": {
+          "latitude": "Широта",
+          "longitude": "Долгота",
+          "name": "Название"
+        },
+        "description": "Choose the name and coordinates. Internet access is checked once when you add a location.",
+        "title": "Gismeteo HA"
+      }
+    }
+  },
+  "options": {
+    "abort": {
+      "no_options_available": "Конфигурация, созданная через configuration.yaml, не может быть изменена через пользовательский интерфейс."
+    },
+    "step": {
+      "init": {
+        "data": {
+          "show_on_map": "Show location on the map",
+          "add_sensors": "Create extra weather sensors",
+          "forecast_days": "Forecast sensor days ahead (0–6)",
+          "poll_interval": "Provider refresh interval (10–120 minutes)",
+          "stale_minutes": "Accept cached data while offline (0–180 minutes)",
+          "extended_data": "Enrich with website data (best effort)"
+        },
+        "title": "Gismeteo HA options",
+        "data_description": {
+          "poll_interval": "A longer interval reduces network requests. Default: 15 minutes.",
+          "stale_minutes": "Zero disables stale cached data. The source and age remain visible in diagnostics.",
+          "extended_data": "Website markup can change; an HTML parser failure never interrupts core forecasts."
+        }
+      }
+    }
+  },
+  "system_health": {
+    "info": {
+      "can_reach_server": "Доступ к серверу Gismeteo"
+    }
+  }
+}

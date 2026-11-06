@@ -1,0 +1,79 @@
+{
+  "config": {
+    "abort": {
+      "no_mixed_config": "Já configurado. A configuração via configuration.yaml não é compatível com configurações via interface do usuário.",
+      "already_configured": "This location is already configured."
+    },
+    "error": {
+      "cannot_connect": "Falhou ao conectar"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "name": "Nome"
+        },
+        "description": "Choose the name and coordinates. Internet access is checked once when you add a location.",
+        "title": "Gismeteo HA"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "platform_sensor": "Entidades do sensor ativadas",
+          "platform_weather": "Entidade meteorológica ativada",
+          "mode": "Modo de previsão",
+          "forecast": "Adicionar sensor de previsão de 3h",
+          "show_on_map": "Show location on the map",
+          "add_sensors": "Create extra weather sensors",
+          "forecast_days": "Forecast sensor days ahead (0–6)",
+          "poll_interval": "Provider refresh interval (10–120 minutes)",
+          "stale_minutes": "Accept cached data while offline (0–180 minutes)",
+          "extended_data": "Enrich with website data (best effort)"
+        },
+        "title": "Gismeteo HA options",
+        "data_description": {
+          "poll_interval": "A longer interval reduces network requests. Default: 15 minutes.",
+          "stale_minutes": "Zero disables stale cached data. The source and age remain visible in diagnostics.",
+          "extended_data": "Website markup can change; an HTML parser failure never interrupts core forecasts."
+        }
+      }
+    }
+  },
+  "system_health": {
+    "info": {
+      "can_reach_server": "Alcance o servidor Gismeteo"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "visibility": {
+        "name": "Visibility"
+      },
+      "dew_point": {
+        "name": "Dew point (calculated)"
+      },
+      "sunrise": {
+        "name": "Sunrise"
+      },
+      "sunset": {
+        "name": "Sunset"
+      },
+      "visibility_forecast": {
+        "name": "Forecast visibility day {day}"
+      },
+      "dew_point_forecast": {
+        "name": "Forecast dew point day {day}"
+      },
+      "data_source": {
+        "name": "Data source"
+      },
+      "last_refresh": {
+        "name": "Last refresh"
+      }
+    }
+  }
+}
